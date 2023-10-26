@@ -50,6 +50,20 @@
     <title>Boolking</title>
 </head>
 <body>
-    
+    <div class="container"></div>
+        <div class="hotels">
+            <ul>
+                <?php foreach($hotels as $hotelist => $hotel): ?>
+                    <li>
+                        <?php echo $hotel['name'] ?> |
+                        <?php echo $hotel['description'] ?> |
+                        <?php echo $hotel['parking'] ? 'si' : 'no' ?> |
+                        <?php echo $hotel['vote'] ?> |
+                        <?php echo $hotel['distance_to_center'] ?>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
+        </div>
+    </div>
 </body>
 </html>
